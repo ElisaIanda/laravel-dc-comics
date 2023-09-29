@@ -1,0 +1,34 @@
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #656661;
+}
+.jumbo {
+    background-image: url(/public/images/jumbotron.jpg);
+    height: 400px;
+    position: relative;
+}
+.btn-series {
+    width: 14%;
+    background-color:#0d6efd;
+    position: absolute;
+    height: 50px;
+    top: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 45px;
+    color: white;
+}
+h5{
+    margin: 0;
+}

@@ -1,1 +1,12 @@
 @use "bootstrap";
+@use './partials/_header';
+@use './partials/_main';
+@use './partials/_footer';
+
+body {
+    background-color: #1c1c1c;
+
+    header {
+        background-color: white;
+    }
+}
