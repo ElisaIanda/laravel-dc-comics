@@ -18,13 +18,12 @@
                             <div class="py-2">
                                 <b>Scrittori</b>
                             </div>
-                            {{ str_replace(['[', ']'], ' ', $comics['writers']) }}
-                        </div>
+                            {{implode(",", $comics["writers"]) }}                         </div>
                         <div class="col-6">
                             <div class="py-2">
                                 <b>Artisti</b>
                             </div>
-                            {{ str_replace(['[', ']'], ' ', $comics['artists']) }}
+                            {{implode(",", $comics["artists"]) }}     
                         </div>
                     </div>
 
