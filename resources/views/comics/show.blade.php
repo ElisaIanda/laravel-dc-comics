@@ -3,6 +3,7 @@
 @section("content") 
 <div class="container my-5">
     <a href={{ route("comics.index", ["id" => $comics->id]) }} class="btn btn-outline-primary my-4 text-white">Indietro</a>
+    <a href={{route("comics.edit", $comics->id)}} class="btn btn-outline-warning my-4 text-white">Modifica</a>
     <div class="card my-3" >
         <div class="row g-0">
             <div class="col-md-4">
