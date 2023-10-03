@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 // use App\Http\Requests\UpdatePastaRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
-
+use PhpParser\Node\Expr\FuncCall;
 
 class ComicController extends Controller
 {
@@ -80,5 +80,14 @@ class ComicController extends Controller
         $comics->update($data);
 
         return redirect()->route('comics.show', $comics->id);
+    }
+
+    public function destroy($id){
+        $comics = Comic::findOrFail($id);
+
+        // Se voglio cancellarlo definitivamente
+        $comics->delete();
+        
+        return redirect()->route('comics.index');
     }
 }

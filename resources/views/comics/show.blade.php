@@ -4,6 +4,16 @@
 <div class="container my-5">
     <a href={{ route("comics.index", ["id" => $comics->id]) }} class="btn btn-outline-primary my-4 text-white">Indietro</a>
     <a href={{route("comics.edit", $comics->id)}} class="btn btn-outline-warning my-4 text-white">Modifica</a>
+
+    <form action="{{ route("comics.destroy", $comics->id)}}"
+        method="POST" class="d-inline-block">
+        @csrf
+        
+        {{-- Passo il vero metodo che voglio usare --}}
+        @method("DELETE")
+        <input type="submit" value="Elimina" class="btn btn-danger">
+    </form>
+
     <div class="card my-3" >
         <div class="row g-0">
             <div class="col-md-4">
