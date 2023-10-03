@@ -87,7 +87,8 @@ class ComicController extends Controller
 
         // Se voglio cancellarlo definitivamente
         $comics->delete();
-        
+
         return redirect()->route('comics.index');
     }
+
 }
