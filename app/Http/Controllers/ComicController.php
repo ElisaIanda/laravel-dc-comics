@@ -32,6 +32,9 @@ class ComicController extends Controller
     {
         $comics = $request->all();  
 
+        $comics["artists"] = explode(",", $comics["artists"]);
+        $comics["writers"] = explode(",", $comics["writers"]);
+
         $newComic = new Comic();
         $newComic->fill($comics);
 
